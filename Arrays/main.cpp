@@ -1,18 +1,16 @@
 ﻿#include <iostream>
-using namespace std;
-#define tab "\t"
-#define delimiter "\n-------------------------------------\n"
+#include"stdafx.h"
+#include"Constants.h"
+#include"Print.h"
+#include"Print.cpp"
 
-const int ROWS = 3;
-const int COLS = 4;
 
 template <typename T>
 void FillRand(T arr[], const int n, int minRand = 0, int maxRand = 100);
 template <typename T>
 void FillRand(T arr[ROWS][COLS], const int ROWS, const int COLS, int minRand = 0, int maxRand = 100);
 
-template <typename T>void Print(T arr[], const int n);
-template <typename T>void Print(T arr[ROWS][COLS], const int ROWS, const int COLS);
+
 
 template <typename T>T Sum(T arr[], const int n);
 template <typename T>T Sum(T arr[ROWS][COLS], const int ROWS, const int COLS);
@@ -112,25 +110,7 @@ template <typename T>void FillRand(T arr[ROWS][COLS], const int ROWS, const int 
 	}
 }
 
-template <typename T>void Print(T arr[], const int n)
-{
-	for (int i = 0; i < n; i++)
-	{
-		cout << arr[i] << tab;
-	}
-	cout << endl;
-}
-template <typename T>void Print(T arr[ROWS][COLS], const int ROWS, const int COLS)
-{
-	for (int i = 0; i < ROWS; i++)
-	{
-		for (int j = 0; j < COLS; j++)
-		{
-			cout << arr[i][j] << "\t";
-		}
-		cout << endl;
-	}
-}
+
 
 template <typename T>T Sum(T arr[], const int n)
 {
